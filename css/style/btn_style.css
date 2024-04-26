@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+/*btnの設定
+---------------------------------------------------------------------------*/
+p.btn {margin: 0;}
+
+/*ボタンを囲むブロック*/
+.btn {
+	text-align: center;	/*内容をセンタリング*/
+}
+
+/*ボタン*/
+.btn a,
+.btn input {
+	display: inline-block;text-decoration: none;border: none;
+	font-size: 1em;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.2);	/*ボックスの影。右へ、下へ、ぼかし幅の順。0,0,0は黒の事で0.2は色が20%出た状態。*/
+	background: #e159a2;	/*背景色*/
+	letter-spacing: 0.1em;	/*文字間隔を少し広くする指定*/
+	color: #fff;			/*文字色*/
+	transition: 0.3s;		/*hoverまでにかける時間。0.3秒。*/
+	padding: 1em 2em;		/*余白*/
+	margin: 0 auto 30px;	/*ボタンの外側に空けるスペース。上、左右、下への順番。*/
+}
+
+/*ボタンのマウスオン時*/
+.btn a:hover,
+.btn input:hover {
+	cursor: pointer;		/*inputタグを使う場合に「手」のマークになるように。リンクと同じ表示になるようにという事です。*/
+	opacity: 1;
+	filter: brightness(1.2);
+	transform: scale(1.02);	/*実寸の102%に拡大*/
+}
+
+/*listブロック内のボタン*/
+.list .btn a {
+	margin: 0;
+}

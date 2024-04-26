@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/*フッター設定
+---------------------------------------------------------------------------*/
+footer small {font-size: 100%;}
+
+footer {
+	font-size: 0.7rem;		/*文字サイズ*/
+	text-align: center;		/*内容をセンタリング*/
+	background: #e159a2;	/*背景色*/
+	color: #fff;			/*文字色*/
+}
+
+/*リンクテキスト*/
+footer a {text-decoration: none;color: #fff;}
+
+/*著作部分*/
+.pr {display: block;}
+
+/*copyrightと著作部分*/
+.copy {padding: 1%;}
+
+/*fab_icon*/
+.fab_icon {
+	display: inline;				/*flexボックスを使う指定*/ 
+	justify-content: center;	/*水平揃えの指定。左右中央に配置されるように。*/
+	align-items: center;		/*垂直揃えの指定。天地中央に配置されるように。*/
+}
+
+/*アイコン１個あたり*/
+.fab_icon li {
+	display: inline-block;
+}
+
+/*フッターメニュー
+---------------------------------------------------------------------------*/
+/*メニューブロック全体*/
+#footermenu {
+	margin: 0;
+	padding: 1%;		/*ブロック内の余白*/
+}
+
+/*メニュー１個あたり*/
+#footermenu li {
+	display: inline-block;	/*横並びにする*/
+	padding: 0 10px;		/*上下、左右への余白*/
+	font-size: 1.2em;		/*文字サイズ*/
+}

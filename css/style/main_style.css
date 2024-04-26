@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+/*mainブロック設定
+---------------------------------------------------------------------------*/
+/*mainブロックの設定*/
+main {	
+	flex: 1;
+}
+
+/*mainブロック内のh2タグ*/
+main h2 {
+	margin: 0;
+	margin-bottom: 1em;	/*下に空けるスペース*/
+	position: relative;		/*アニメーションに必要な設定*/
+	letter-spacing: 0.1em;	/*文字間隔を少しだけ広くとる設定*/
+	border-bottom: 3px solid #f5f5f5;	/*デフォルトのラインの色。下の「bottom」と「height」の３ヶ所の数字部分を合わせる*/
+}
+
+/*下線スタイル*/
+main h2 .uline {
+	display: inline-block;position: relative;
+	padding: 10px 20px;	/*h2タグ内の余白。上下、左右への順番。*/
+	bottom: -3px;		/*上の「border-bottom」と下の「height」の３ヶ所の数字部分を合わせる。※この行だけマイナスをつけるように。*/
+}
+main h2 .uline::before {
+	content: "";position: absolute;bottom: 0px;left: 0px;width: 100%;
+	height: 3px;	/*ラインの高さ。上の「border-bottom」と「bottom」の３ヶ所の数字部分を合わせる*/
+	background: #e159a2;		/*アニメーション時のラインの色*/
+	transition: 1s 0.5s;		/*1sはアニメーションの実行時間は1秒。0.5秒遅れてスタートする指定。*/
+	transform: scaleX(0);		/*幅。最初は0にして見えなくしておく。*/
+	transform-origin: left top;	/*線の出現起点が左からになるように。中央からの出現がよければこの１行削除。*/
+}
+main h2.linestyle .uline::before {
+	transform: scaleX(1);
+}
+
+/*mainブロック内のh3タグ*/
+main h3 {
+	padding: 0 20px;
+	margin-bottom: 1em;	/*下に空けるスペース*/
+	border-bottom: 1px solid #ddd;
+}
+
+/*mainブロックのpタグ*/
+main p {
+	margin: 0 20px 2em;	/*上、左右、下へ空けるスペース*/
+}
+main p + p {
+	margin-top: -1em;
+}
+
+
+/*2カラムの場合
+---------------------------------------------------------------------------*/
+/*2カラム（.mainと.sub）を囲むブロック*/
+.c2 {
+	display: flex;			/*flexボックスを使う指定*/
+	flex-direction: column;	/*子要素を縦並びにする*/
+	padding: 5%;			/*ボックス内の余白*/
+}
+
+/*.mainのsectionのpaddingを一旦リセット*/
+.main section {
+	padding: 0;
+}
+
+/*１つ目以外のsectionの上部に空ける余白。section同士の上下間にとる余白です。*/
+.main section:not(:nth-of-type(1)) {
+	padding-top: 5%;
+}
+
+/*main（※頭にドット「.」のない「main」とは全く異なります。）*/
+.main {
+	order: 2;	/*表示させる順番。数字が小さい方が最初に表示されます。*/
+}
+
+/*sub*/
+.sub {
+	order: 1;	/*表示させる順番。数字が小さい方が最初に表示されます。*/
+}
+
+/*sub内のh3タグ*/
+.sub h3 {
+	font-weight: normal;
+	font-size: 1em;
+	margin: 0;
+	border: none;
+	background: #e159a2;	/*背景色*/
+	color: #fff;			/*文字色*/
+	text-align: center;		/*テキストをセンタリング*/
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Redstar</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Redstarホームページ 「PCに関する内容・ソフトウェア・アプリ・機器に類する疑問」相談・解決">
+	<link rel="stylesheet" href="css/ios_reset.css">
+	<link rel="stylesheet" href="css/pink_style.css">
+	<link rel="stylesheet" href="css/animation.css">
+	<link rel="stylesheet" href="css/Google Fonts.css">
+	<link rel="stylesheet" href="css/inview.css">
+	<link rel="stylesheet" href="css/FontAwesome.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+
+<div id="logo">
+<h1><a href="index.html"><img src="images/logo_simple.png" alt="Redstar"></a></h1>
+</div>
+
+</header>
+
+<!--#menubar-->
+<div id="menubar">
+
+	<nav>
+		<ul>
+			<li><a href="index.html">ホーム</a></li>
+			<li>
+				<a href="service.html">提供サービス一覧</a>
+				<ul>
+					<li><a href="service.html">PC納品（工事中）</a></li>
+					<li><a href="service.html">ソフトウェア開発（工事中）</a></li>
+					<li><a href="service.html">保守・管理（工事中）</a></li>
+					<li><a href="service_html.html">ホームページ作成（工事中）</a></li>
+					<li><a href="service.html">仮想通貨マイニング（工事中）</a></li>
+					<li><a href="service.html">サービス（工事中）</a></li>
+				</ul>
+			</li>
+			
+			<li><a href="link.html">sns_link</a>
+				<ul>
+					<li><a href="link_youtube.html">youtube</a></li>
+					<li><a href="link.html">X(twitter)（工事中）</a></li>
+					<li><a href="link.html">bluesky（工事中）</a></li>
+					<li><a href="link.html">instagram（工事中）</a></li>
+					<li><a href="link.html">ficebook（工事中）</a></li>
+					<li><a href="link.html">tiktok（工事中）</a></li>					
+					<li><a href="https://www.amazon.jp/hz/wishlist/ls/RNQ2LJ9OCKZQ?ref_=wl_share">amazon欲しいものリスト（工事中）</a></li>
+				</ul>
+			<li><a href="payment.html">支払い先</li>
+			<li><a href="contact.html">お問い合わせ</a></li>
+		</ul>
+	</nav>
+
+	<div class="sh">
+		<p>
+			3本メニュー<br>
+			<br>
+			<br>
+			
+		</p>
+	</div>
+	<!--/.sh-->
+
+</div>
+<!--/#menubar-->
+
+<main>
+
+<section>
+
+<h2>お問い合わせフォーム</h2>
+
+<!-- フォームの情報はここからです -->
+<form name="form1" enctype="multipart/form-data" method="post" action="<?php echo $_SERVER["REQUEST_URI"];?>">
+<input type="hidden" name="mode" value="form">
+<table class="ta1">
+<!-- 入力／確認 -->
+<!--<tr><th class="tamidashi" colspan="2">お問い合わせフォーム</th></tr>-->
+<tr>
+<th width="150">お名前<span style="color:red">※</span></th>
+<td>
+<input name="item1" value="<?php echo $form["item1"];?>" type="text" size="40" maxlength="500" class="ws">
+<?php if ($msg["item1"]) echo '<div style="color:red">' . $msg["item1"] . '</div>'; ?>
+</td>
+</tr>
+<tr>
+<th width="150">メールアドレス<span style="color:red">※</span></th>
+<td>
+<input name="item2" value="<?php echo $form["item2"];?>" type="text" size="40" maxlength="500" class="ws">
+<?php if ($msg["item2"]) echo '<div style="color:red">' . $msg["item2"] . '</div>'; ?>
+</td>
+</tr>
+<tr>
+<th>お問い合わせ内容<span style="color:red">※</span></th>
+<td>
+<textarea name="item3" cols="40" rows="10" class="wl"><?php echo $form["item3"]; ?></textarea>
+<?php if ($msg["item3"]) echo '<div style="color:red">' . $msg["item3"] . '</div>'; ?>
+</td>
+</tr>
+</table>
+
+<p class="btn">
+<input type="submit" value="内容を確認する">
+&nbsp;
+<input type="reset" value="リセット">
+</p>
+
+</form>
+<!-- フォームの情報はここまでです -->
+
+</section>
+
+</main>
+
+<footer>
+
+<ul id="footermenu">
+<li><a href="#">フッターメニュー</a></li>
+<li><a href="#">フッターメニュー</a></li>
+<li><a href="#">フッターメニュー</a></li>
+<li><a href="#">フッターメニュー</a></li>
+<li><a href="#">フッターメニュー</a></li>
+</ul>
+
+<div class="copy">
+<small>&copy; <a href="index.html">Redstar</a> @since2024 All Rights Reserved.</small>
+<span class="pr"><a href="https://template-party.com/" target="_blank">Redstar</a></span>
+</div>
+
+</footer>
+
+<!--開閉ボタン（ハンバーガーアイコン）-->
+<div id="menubar_hdr">
+<span></span><span></span><span></span>
+</div>
+
+</div>
+<!--/#container-->
+
+<!--jQueryの読み込み-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!--パララックス（inview）-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/protonet-jquery.inview/1.1.2/jquery.inview.min.js"></script>
+<script src="js/jquery.inview_set.js"></script>
+
+<!--このテンプレート専用のスクリプト-->
+<script src="js/main.js"></script>
+
+<!--ページの上部へ戻るボタン-->
+<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+
+</body>
+</html>

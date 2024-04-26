@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+/*submenu（２カラム時にsubで使っているメニュー）
+---------------------------------------------------------------------------*/
+/*メニュー全体の設定*/
+ul.submenu {
+	list-style: none;
+	padding: 0;margin: 0;
+	margin-bottom: 20px;		/*メニューブロックの下に空けるスペース*/
+	border-top: solid 1px #ccc;	/*上の線の幅、線種、色*/
+}
+
+/*メニュー１個あたりの設定*/
+ul.submenu li {
+	display: block;margin: 0;
+	border-bottom: solid 1px #ccc;	/*下線の幅、線種、色*/
+}
+ul.submenu li a {
+	text-decoration: none;display: block;
+	padding: 5px 10px;	/*上下、左右へとる余白*/
+}
+
+/*マウスオンj時の背景色*/
+ul.submenu li a:hover {
+	background: #f0f0f0;
+}
